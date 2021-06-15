@@ -1,8 +1,5 @@
 #!/bin/bash -e
 
-wget http://deb.debian.org/debian/pool/main/g/gpsd/gpsd_3.22-3.debian.tar.xz
-wget http://deb.debian.org/debian/pool/main/g/gpsd/gpsd_3.22.orig.tar.xz
-
 apt-get update  -y -q
 apt-get install -y -q wget xz-utils gnupg ca-certificates
 apt-get upgrade -y -q
@@ -13,6 +10,9 @@ apt-get -y install python3-all-dev python3-all-dbg xsltproc docbook-xsl \
   docbook-xml libncurses-dev libdbus-glib-1-dev makedev python3-matplotlib \
   python3-gps qtbase5-dev scons dh-buildinfo dh-apparmor dh-exec pps-tools \
   asciidoc asciidoctor libsystemd-dev
+
+wget http://deb.debian.org/debian/pool/main/g/gpsd/gpsd_3.22-3.debian.tar.xz
+wget http://deb.debian.org/debian/pool/main/g/gpsd/gpsd_3.22.orig.tar.xz
 
 xzcat gpsd_3.22.orig.tar.xz | tar xvf -
 
