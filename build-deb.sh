@@ -3,7 +3,7 @@
 wget http://deb.debian.org/debian/pool/main/g/gpsd/gpsd_3.22-3.debian.tar.xz
 wget http://deb.debian.org/debian/pool/main/g/gpsd/gpsd_3.22.orig.tar.xz
 
-sudo apt-get -y install devscripts build-essential lintian
+sudo apt-get -y install devscripts build-essential lintian wget
 
 sudo apt-get -y install python3-all-dev python3-all-dbg xsltproc docbook-xsl \
   docbook-xml libncurses-dev libdbus-glib-1-dev makedev python3-matplotlib \
