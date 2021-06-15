@@ -5,6 +5,7 @@ wget http://deb.debian.org/debian/pool/main/g/gpsd/gpsd_3.22.orig.tar.xz
 
 apt-get update  -y -q
 apt-get install -y -q wget xz-utils gnupg ca-certificates
+apt-get upgrade -y -q
 
 apt-get -y install devscripts build-essential lintian
 
