@@ -1,4 +1,4 @@
-#!/usr/bin/bash -e
+#!/bin/bash -e
 
 wget http://deb.debian.org/debian/pool/main/g/gpsd/gpsd_3.22-3.debian.tar.xz
 wget http://deb.debian.org/debian/pool/main/g/gpsd/gpsd_3.22.orig.tar.xz
