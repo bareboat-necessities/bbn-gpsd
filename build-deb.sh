@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+CONTAINER_DISTRO=$1
+
 apt-get update  -y -q
 apt-get install -y -q wget xz-utils gnupg ca-certificates
 apt-get upgrade -y -q
