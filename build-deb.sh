@@ -32,7 +32,7 @@ cd gpsd-3.22/
 
 xzcat ../gpsd_3.22-3.debian.tar.xz | tar xvf -
 
-export PYTHONPATH=/usr/lib/python3/dist-packages/; debuild -us -uc
+export PYTHONPATH=/usr/lib/python3/dist-packages/; debuild --preserve-envvar=PYTHONPATH -us -uc
 
 cd ..
 
