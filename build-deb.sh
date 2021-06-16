@@ -6,9 +6,14 @@ apt-get upgrade -y -q
 
 apt-get -y install devscripts build-essential lintian
 
+BACKPORT=
+if [ "$CONTAINER_DISTRO" == "debian:buster" ]; then
+  BACKPORT=/buster-backports
+fi
+
 apt-get -y install python3-all-dev python3-all-dbg xsltproc docbook-xsl \
   docbook-xml libncurses-dev libdbus-glib-1-dev makedev python3-matplotlib \
-  python3-gps qtbase5-dev scons dh-buildinfo dh-apparmor dh-exec pps-tools \
+  python3-gps"$BACKPORT" qtbase5-dev scons dh-buildinfo dh-apparmor dh-exec pps-tools \
   asciidoc asciidoctor libsystemd-dev \
   libusb-1.0-0-dev libbluetooth-dev python3-gi python3-cairo gir1.2-gtk-3.0 \
   python3-serial python3-gi-cairo bc dh-python libudev-dev
