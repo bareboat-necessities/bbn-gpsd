@@ -4,16 +4,15 @@ apt-get update  -y -q
 apt-get install -y -q wget xz-utils gnupg ca-certificates
 apt-get upgrade -y -q
 
-apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 04EE7237B7D453EC 648ACFD622F3D138 # debian backports
-echo "deb http://deb.debian.org/debian buster-backports main" > /etc/apt/sources.list.d/debian-backports.list
-apt-get update  -y -q
-
-apt-get -y install devscripts build-essential lintian
-
 BACKPORT=
 if [ "$CONTAINER_DISTRO" == "debian:buster" ]; then
   BACKPORT=/buster-backports
+  apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 04EE7237B7D453EC 648ACFD622F3D138 # debian backports
+  echo "deb http://deb.debian.org/debian buster-backports main" > /etc/apt/sources.list.d/debian-backports.list
+  apt-get update  -y -q
 fi
+
+apt-get -y install devscripts build-essential lintian
 
 apt-get -y install python3-all-dev python3-all-dbg xsltproc docbook-xsl \
   docbook-xml libncurses-dev libdbus-glib-1-dev makedev python3-matplotlib \
