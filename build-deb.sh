@@ -19,8 +19,7 @@ apt-get -y install devscripts build-essential lintian
 apt-get -y install python3-all-dev python3-all-dbg xsltproc docbook-xsl \
   docbook-xml libncurses-dev libdbus-glib-1-dev makedev python3-matplotlib \
   python3-gps"$BACKPORT" qtbase5-dev scons dh-buildinfo dh-apparmor dh-exec pps-tools \
-  asciidoc asciidoctor libsystemd-dev \
-  libncurses5-dev python-dev \
+  asciidoc asciidoctor libsystemd-dev libdbus-1-dev \
   libusb-1.0-0-dev libbluetooth-dev python3-gi python3-cairo gir1.2-gtk-3.0 \
   python3-serial python3-gi-cairo bc dh-python libudev-dev
 
